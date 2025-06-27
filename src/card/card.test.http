@@ -1,0 +1,40 @@
+### 1. Создать карточку
+POST http://localhost:3000/cards
+Content-Type: application/json
+
+{
+  "title": "Как работать с Mongoose",
+  "text": "Изучите документацию",
+  "sectionId": "685e5642041a136c72b67f5e"
+}
+
+###
+
+### 2. Получить все карточки
+GET http://localhost:3000/cards
+
+###
+
+### 3. Получить карточки по секции
+GET http://localhost:3000/cards/section/685e5642041a136c72b67f5e
+
+###
+
+### 4. Получить карточку по ID
+GET http://localhost:3000/cards/685e6a84d7e4b432317302e4
+
+###
+
+### 5. Обновить карточку
+PATCH http://localhost:3000/cards/685e6a84d7e4b432317302e4
+Content-Type: application/json
+
+{
+  "text": "Новое описание 5",
+  "sectionId": "667d5f5b9c9d6e1d9c9d6e1d"
+}
+
+###
+
+### 6. Удалить карточку
+DELETE http://localhost:3000/cards/685e6a84d7e4b432317302e4

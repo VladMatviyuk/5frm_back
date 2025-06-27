@@ -1,0 +1,40 @@
+### 1. Создать новую секцию
+POST http://localhost:3000/sections
+Content-Type: application/json
+
+{
+  "name": "Главная",
+  "description": "Главная секция"
+}
+
+###
+
+### 2. Получить все секции
+GET http://localhost:3000/sections
+Accept: application/json
+
+###
+
+### 3. Получить секцию по ID
+# Замените <id> на актуальный ID из первого ответа
+GET http://localhost:3000/sections/685e5cb00fa7a604c72ee322
+Accept: application/json
+
+###
+
+### 4. Обновить секцию по ID
+# Замените <id> на актуальный ID
+PUT http://localhost:3000/sections/685e5cb00fa7a604c72ee322
+Content-Type: application/json
+
+{
+  "name": "Главная обновлённая",
+  "description": "Обновлённое описание"
+}
+
+###
+
+### 5. Удалить секцию по ID
+# Замените <id> на актуальный ID
+DELETE http://localhost:3000/sections/685e5cb00fa7a604c72ee322
+Accept: application/json
