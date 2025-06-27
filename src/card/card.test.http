@@ -1,6 +1,7 @@
 ### 1. Создать карточку
-POST http://localhost:3000/cards
+POST http://localhost:3001/cards
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzUxMDI2MzU2LCJleHAiOjE3NTEwMjk5NTZ9.XiMXBKaLUcfU2qoOPrnc5YTc45ow7ZZWJjAzje1C6-0
 
 {
   "title": "Как работать с Mongoose",
@@ -11,30 +12,32 @@ Content-Type: application/json
 ###
 
 ### 2. Получить все карточки
-GET http://localhost:3000/cards
+GET http://localhost:3001/cards
 
 ###
 
 ### 3. Получить карточки по секции
-GET http://localhost:3000/cards/section/685e5642041a136c72b67f5e
+GET http://localhost:3001/cards/section/685e5642041a136c72b67f5e
 
 ###
 
 ### 4. Получить карточку по ID
-GET http://localhost:3000/cards/685e6a84d7e4b432317302e4
+GET http://localhost:3001/cards/685e8bbcb4837c749bdd2a9b
 
 ###
 
 ### 5. Обновить карточку
-PATCH http://localhost:3000/cards/685e6a84d7e4b432317302e4
+PUT http://localhost:3001/cards/685e8bbcb4837c749bdd2a9b
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzUxMDI2MzU2LCJleHAiOjE3NTEwMjk5NTZ9.XiMXBKaLUcfU2qoOPrnc5YTc45ow7ZZWJjAzje1C6-0
 
 {
-  "text": "Новое описание 5",
+  "text": "Новое описание 2",
   "sectionId": "667d5f5b9c9d6e1d9c9d6e1d"
 }
 
 ###
 
 ### 6. Удалить карточку
-DELETE http://localhost:3000/cards/685e6a84d7e4b432317302e4
+DELETE http://localhost:3001/cards/685e8bbcb4837c749bdd2a9b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzUxMDI2MzU2LCJleHAiOjE3NTEwMjk5NTZ9.XiMXBKaLUcfU2qoOPrnc5YTc45ow7ZZWJjAzje1C6-0
