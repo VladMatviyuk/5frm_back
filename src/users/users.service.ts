@@ -4,6 +4,13 @@ import { Model } from 'mongoose';
 import { UserDocument, User } from './schema/user.schema';
 import * as bcrypt from 'bcrypt';
 
+type Bcrypt = {
+  compare: (s: string, hash: string) => Promise<boolean>;
+  hash: (s: string, rounds: number) => Promise<string>;
+};
+
+const bcryptTyped = bcrypt as Bcrypt;
+
 @Injectable()
 export class UsersService {
   private readonly saltRounds = 10;
@@ -14,11 +21,11 @@ export class UsersService {
     return this.userModel.findOne({ username }).exec();
   }
 
-  async validatePassword(plain: string, hashed: string): Promise<boolean> {
-    return bcrypt.compare(plain, hashed);
+  validatePassword(plain: string, hashed: string): Promise<boolean> {
+    return bcryptTyped.compare(plain, hashed);
   }
 
-  async hashPassword(password: string): Promise<string> {
-    return bcrypt.hash(password, this.saltRounds);
+  hashPassword(password: string): Promise<string> {
+    return bcryptTyped.hash(password, this.saltRounds);
   }
 }
