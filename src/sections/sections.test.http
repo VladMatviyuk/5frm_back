@@ -1,6 +1,7 @@
 ### 1. Создать новую секцию
 POST http://localhost:3000/sections
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InB1cGEiLCJpYXQiOjE3NTEwOTgzNjAsImV4cCI6MTc1MTEwMTk2MH0.nZT9eTlPttpphlEiaib2_7fhI_v5bRtoLq245s7bLDo
 
 {
   "name": "Главная",

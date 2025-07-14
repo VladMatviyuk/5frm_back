@@ -46,7 +46,6 @@ export class CardController {
   }
 
   @Get('section/:sectionId')
-  @UseGuards(AuthGuard('jwt'))
   findAllBySection(@Param('sectionId') sectionId: string) {
     return this.cardService.findAllBySection(sectionId);
   }

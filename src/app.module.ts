@@ -10,7 +10,7 @@ import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      `mongodb://admin:secret@localhost:27017/test?authSource=admin`,
+      `mongodb://admin:adminpass@localhost:27018/test?authSource=admin`,
     ),
     SectionsModule,
     CardModule,
