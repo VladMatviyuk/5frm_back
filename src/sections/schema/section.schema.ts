@@ -7,7 +7,7 @@ export class Section {
   name: string;
 
   @Prop()
-  description: string;
+  alias: string;
 }
 
 export const SectionSchema = SchemaFactory.createForClass(Section);

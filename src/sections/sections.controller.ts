@@ -22,9 +22,9 @@ export class SectionsController {
     return this.sectionsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.sectionsService.findOne(id);
+  @Get(':alias')
+  findOne(@Param('alias') alias: string) {
+    return this.sectionsService.findOne(alias);
   }
 
   @Post()

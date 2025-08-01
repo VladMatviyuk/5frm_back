@@ -23,16 +23,6 @@ export class CardController {
     return this.cardService.create(createCardDto);
   }
 
-  @Get()
-  findAll() {
-    return this.cardService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.cardService.findOne(id);
-  }
-
   @Put(':id')
   @UseGuards(AuthGuard('jwt'))
   update(@Param('id') id: string, @Body() updateCardDto: UpdateCardDto) {

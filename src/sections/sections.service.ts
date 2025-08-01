@@ -16,11 +16,11 @@ export class SectionsService {
     return this.sectionModel.find().exec();
   }
 
-  async findOne(id: string): Promise<SectionDocument> {
-    const section = await this.sectionModel.findById(id).exec();
+  async findOne(alias: string): Promise<SectionDocument> {
+    const section = await this.sectionModel.findOne({ alias }).exec();
 
     if (!section) {
-      throw new NotFoundException(`Section with ID ${id} not found`);
+      throw new NotFoundException(`Section with ID ${alias} not found`);
     }
 
     return section;
